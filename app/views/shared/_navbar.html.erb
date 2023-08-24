@@ -1,0 +1,21 @@
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="">Crazy Cats</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li>
+        <%= link_to 'Inicia Sesión', new_user_session_path, class: "nav-link active" %>
+        </li>
+        <li>
+        <%= link_to 'Regístrate', new_user_registration_path, class: "nav-link active" %>
+        </li>
+        <li>
+        <%= link_to 'Cerrar Sesión', destroy_user_session_path, class: "nav-link active", method: :delete %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
