@@ -18,11 +18,11 @@ class PostsController < ApplicationController
 
   # GET /posts/1/edit
   def edit
-    if current_user.id == @post.user_id
-      render :edit
+    if current_user.id != @post.user_id
+  render :edit
     else
       redirect_to root_path, notice: "You don't have permission to edit this post."
-    end
+    end end
   end
 
   # POST /posts or /posts.json

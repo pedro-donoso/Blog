@@ -22,7 +22,7 @@ class PostsController < ApplicationController
       render :edit
     else
       redirect_to root_path, notice: "You don't have permission to edit this post."
-    end
+    end end
   end
 
   # POST /posts or /posts.json
