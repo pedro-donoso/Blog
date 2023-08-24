@@ -6,6 +6,11 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <% if user_signed_in? %>
+           <li>
+        <%= button_to 'Cerrar Sesión', destroy_user_session_path, class: "nav-link", method: :delete %>
+        </li>
+        <% else %>
        <li>
         <%= link_to 'Inicia Sesión', new_user_session_path, class: "nav-link" %>
         </li>
@@ -13,9 +18,7 @@
         <li>
         <%= link_to 'Regístrate', new_user_registration_path, class: "nav-link" %>
         </li>
-        <li>
-        <%= button_to 'Cerrar Sesión', destroy_user_session_path, class: "nav-link", method: :delete %>
-        </li>
+        <% end %>
       </ul>
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
