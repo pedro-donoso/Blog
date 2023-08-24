@@ -9,14 +9,22 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
       <% if user_signed_in? %>
-       <li>
+       <li class="mx-1">
        <p>
            Hola <strong>   <%= current_user.email %> </strong>
        </p>
-     
+       </li>
+
+        <li>
+            <%= link_to 'Último Post', posts_path, class: "nav-link" %>
         </li>
-        <li class="mx-5">
+        
+    
+          <li>
             <%= button_to 'Cerrar Sesión', destroy_user_session_path, class: "nav-link", method: :delete %>
+        
+        
+         
         </li>
             <% else %>
        <li>
@@ -26,6 +34,8 @@
         <li>
             <%= link_to 'Regístrate', new_user_registration_path, class: "nav-link" %>
         </li>
+
+      
             <% end %>
       </ul>
 
