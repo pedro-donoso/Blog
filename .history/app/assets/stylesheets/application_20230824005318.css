@@ -17,12 +17,3 @@
  .image{
     width: 25%
  }
-
- #acceso{
-
-   background-color: yellowgreen;
-   display: flex;
-   justify-content: center;
-   align-items: justify;
-
- }

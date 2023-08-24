@@ -19,10 +19,7 @@
  }
 
  #acceso{
-
-   background-color: yellowgreen;
+ 
    display: flex;
-   justify-content: center;
-   align-items: justify;
-
+  justify-content: justify
  }

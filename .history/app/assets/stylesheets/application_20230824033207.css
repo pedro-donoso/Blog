@@ -21,8 +21,9 @@
  #acceso{
 
    background-color: yellowgreen;
-   display: flex;
-   justify-content: center;
-   align-items: justify;
+   position: absolute;
+  top: 50%;
+  left: 50%;
+
 
  }
