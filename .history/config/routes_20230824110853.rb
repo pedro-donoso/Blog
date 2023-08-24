@@ -5,5 +5,5 @@ Rails.application.routes.draw do
 
   resource :posts, except: [:index]
   root "home#index"
-  get '/posts', to: 'posts#index', as: 'user_root'
+  get '/posts', to: 'posts#index', as: 'posts'
 end
